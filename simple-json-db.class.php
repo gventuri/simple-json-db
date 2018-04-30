@@ -10,7 +10,7 @@
 
       //Create the db, if it doesn't exists
       if(!file_exists($path)){
-        $fp = fopen($path.".json,"wb");
+        $fp = fopen($path.".json", "wb");
         fwrite($fp, "{}"); // -> Empty json object
         fclose($fp);
       }
