@@ -54,9 +54,9 @@ This will return a Json object, like this:
 
 ```json
     {
-        id: 1,
-        name: "John",
-        surname: "Doe"
+        "id": 1,
+        "name": "John",
+        "surname": "Doe"
     }
 ```
 
@@ -87,18 +87,18 @@ This will return a Json object, like this:
     {
         [
             {
-                id: 1,
-                name: "John",
-                surname: "Doe",
-                age: 24,
-                city: "Amsterdam"
+                "id": 1,
+                "name": "John",
+                "surname": "Doe",
+                "age": 24,
+                "city": "Amsterdam"
             },
             {
-                id: 27,
-                name: "John",
-                surname: "Doe",
-                age: 47,
-                city: "Rome"
+                "id": 27,
+                "name": "John",
+                "surname": "Doe",
+                "age": 47,
+                "city": "Rome"
             }
         ]
     }
