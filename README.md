@@ -54,9 +54,11 @@ This will return a Json object, like this:
 
 ```json
     {
-        "id": 1,
-        "name": "John",
-        "surname": "Doe"
+        "1": {
+            "id": "1",
+            "name": "John",
+            "surname": "Doe"
+        }
     }
 ```
 
@@ -85,22 +87,20 @@ This will return a Json object, like this:
 
 ```json
     {
-        [
-            {
-                "id": 1,
-                "name": "John",
-                "surname": "Doe",
-                "age": 24,
-                "city": "Amsterdam"
-            },
-            {
-                "id": 27,
-                "name": "John",
-                "surname": "Doe",
-                "age": 47,
-                "city": "Rome"
-            }
-        ]
+        "1": {
+            "id": 1,
+            "name": "John",
+            "surname": "Doe",
+            "age": 24,
+            "city": "Amsterdam"
+        },
+        "27": {
+            "id": 27,
+            "name": "John",
+            "surname": "Doe",
+            "age": 47,
+            "city": "Rome"
+        }
     }
 ```
 This is just a test whith a database I've populated with several random results!
