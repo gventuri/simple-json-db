@@ -21,9 +21,9 @@
 
     //Save the db
     public function save(){
-      if($this->db != "{}") $this->db = json_encode($this->db);
+      $json = ($this->db == "{}") ? $this->db : json_encode($this->db);
 
-      file_put_contents($this->path, json_encode($this->db));
+      file_put_contents($this->path, $json);
     }
 
     //Add new
