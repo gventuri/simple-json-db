@@ -24,4 +24,7 @@ $query = array(
     "surname" => "Doe"
 );
 $result2 = $db->getList($query);
+
+//Remove the row from the db based on the key you pass
+$db->delete($data['id']);
 ?>

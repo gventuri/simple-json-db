@@ -35,6 +35,14 @@
       $this->save();
     }
 
+    //Remove field
+    public function delete($key){
+      unset($this->db[$key]);
+
+      //Save the db updated
+      $this->save();
+    }
+
     //Get single
     public function getSingle($key){
       return $this->db[$key];

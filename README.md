@@ -105,6 +105,14 @@ This will return a Json object, like this:
 ```
 This is just a test whith a database I've populated with several random results!
 
+## DELETE
+You can easily delete a result by running the function `delete`, as it follows:
+
+```php
+    //Remove the row from the db based on the key you pass
+    $database3->delete("my-key");
+```
+
 ### EXAMPLE
 You can have a look at the example (index.php) for more information about how to use Simple JSON DB.
 
