@@ -113,6 +113,14 @@ You can easily delete a result by running the function `delete`, as it follows:
     $database3->delete("my-key");
 ```
 
+## CLEAR
+You can easily clear the selected database by running the function `clear`, as it follows:
+
+```php
+    //Clear the db
+    $database3->clear();
+```
+
 ### EXAMPLE
 You can have a look at the example (index.php) for more information about how to use Simple JSON DB.
 

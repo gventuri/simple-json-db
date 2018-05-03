@@ -21,6 +21,8 @@
 
     //Save the db
     public function save(){
+      if($this->db != "{}") $this->db = json_encode($this->db);
+
       file_put_contents($this->path, json_encode($this->db));
     }
 
@@ -71,6 +73,13 @@
       }
 
       return $result;
+    }
+
+    //Clear the db
+    public function clear(){
+      $this->db = "{}";
+
+      $this->save();
     }
   }
 /*** ./DB CLASS ***/
