@@ -105,6 +105,18 @@ This will return a Json object, like this:
 ```
 This is just a test whith a database I've populated with several random results!
 
+### SORT
+You can also sort your result by passing another param to the `getList` function, as it follows:
+
+```php
+    //Order the provided param
+    $result2 = $database3->getList($query, array("on" => "name", "order" => "ASC"));
+```
+
+In the previous example, together with the function we have passed information about the way we want the result to be sorted:
+* `on` is the key we want to consider
+* `order` is the order, and it can be ASC or DESC
+
 ## DELETE
 You can easily delete a result by running the function `delete`, as it follows:
 

@@ -10,7 +10,8 @@
 
       //Create the db, if it doesn't exists
       if(!file_exists($path)){
-        $fp = fopen($path.".json", "wb");
+        if(strpos($path, '.json') === false){ $path .= '.json'; }
+        $fp = fopen($path,"wb");
         fwrite($fp, "{}"); // -> Empty json object
         fclose($fp);
       }
@@ -51,7 +52,7 @@
     }
 
     //Get a list
-    public function getList($conditions = array()){
+    public function getList($conditions = array(), $orderBy = array()){
       $result = array();
 
       //Missing conditions, select all
@@ -70,6 +71,16 @@
 
           if($requirements) $result[$key] = $value;
         }
+      }
+
+      if($orderBy['on'] != '' && $orderBy['order'] != ''){
+        usort($result, function($first, $second) use($orderBy){
+          if($orderBy['order'] == "ASC"){
+            return strcmp($first[$orderBy['on']], $second[$orderBy['on']]) > 0;
+          }else{
+            return strcmp($first[$orderBy['on']], $second[$orderBy['on']]) < 0;
+          }
+        });
       }
 
       return $result;
