@@ -57,6 +57,24 @@ class DB
 
     return $this;
   }
+  
+  /**
+   * UPDATE
+   * 
+   * @param $data: array
+   * @param $key: string
+   * 
+   * @return DB
+   */
+  public function update($data, $key){
+    if($key !== "")
+      $update = array_merge($this->db[$key], $data);
+      $this->db[$key] = $update;
+
+    $this->save();
+
+    return $this;
+  }
 
   /**
    * DELETE
