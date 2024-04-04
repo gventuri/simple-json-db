@@ -99,7 +99,7 @@ class DB
    * @return array
    */
   public function getSingle($key){
-    return $this->db[$key];
+    return $this->db[$key] ?? null;
   }
 
   /**
